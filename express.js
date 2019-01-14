@@ -5,7 +5,7 @@ var auto =express();
 var middle={
     
     requireAuthentication : function(req, res,next){
-        console.log("private!!!");
+        console.log("private!!!!");
         next();
     },
     
