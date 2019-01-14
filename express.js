@@ -2,20 +2,7 @@ var express = require('express');
 
 var auto =express();
 
-var middle={
-    
-    requireAuthentication : function(req, res,next){
-        console.log("private!!!!");
-        next();
-    },
-    
-    logger: function(req,res,next){
-        console.log("Request: " +Date()+" "+req.method+ ""+req.originalUrl);
-            next();
-        
-    }
-    
-}
+var middle = require('./master.js');
 
 auto.use(middle.logger);
 
